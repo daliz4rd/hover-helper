@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hover-helper",
+      "runtimeExecutable": "wsl",
+      "runtimeArgs": ["-e", "python3", "-m", "http.server", "8765", "--directory", "/home/lizard/repos/hover-helper"],
+      "port": 8765
+    }
+  ]
+}
