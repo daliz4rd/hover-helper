@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hover Helper</title>
+  <meta name="description" content="Hover over any piece of JavaScript to learn what it is and what it does." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Hover Helper</h1>
+      <p class="tagline">Hover over any piece of JavaScript to find out what it's called and what it does.</p>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <section class="editor-panel" aria-label="Code editor">
+      <div class="toolbar">
+        <label class="field">
+          <span>Try an example</span>
+          <select id="examples"></select>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="colors" checked />
+          <span>Color-code tokens</span>
+        </label>
+      </div>
+
+      <div class="editor" id="editor">
+        <pre class="highlight" aria-hidden="true"><code id="code"></code></pre>
+        <textarea id="input" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"
+          aria-label="JavaScript code. Move the cursor onto any part of it to see an explanation in the panel beside the editor."
+          aria-describedby="status"></textarea>
+      </div>
+      <p class="status" id="status" role="status"></p>
+    </section>
+
+    <aside class="side">
+      <section class="inspector" id="inspector" aria-live="polite">
+        <h2 class="side-title">Explanation</h2>
+        <div id="inspector-body"></div>
+      </section>
+
+      <section class="legend-panel">
+        <h2 class="side-title">Color key</h2>
+        <p class="hint">Hover a category to spot it in your code.</p>
+        <ul class="legend" id="legend"></ul>
+      </section>
+    </aside>
+  </main>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <footer class="wrap site-footer">
+    <p>Parsing by <a href="https://github.com/acornjs/acorn">Acorn</a>. Explanations link to <a href="https://developer.mozilla.org/">MDN Web Docs</a>. <a href="https://github.com/daliz4rd/hover-helper">Source on GitHub</a>.</p>
+  </footer>
+</body>
+</html>
