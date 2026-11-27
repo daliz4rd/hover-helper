@@ -1,0 +1,14 @@
+{
+  "name": "hover-helper",
+  "version": "1.0.0",
+  "description": "Hover over any piece of JavaScript to find out what it's called and what it does.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "acorn": "8.14.0"
+  }
+}
